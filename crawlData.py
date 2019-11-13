@@ -3,14 +3,14 @@ from selenium.webdriver.common.keys import Keys
 import time
 
 
-#环境设置:
-    # 一、使用pip安装selenium==3.11.0版本
-    # 二、在python中测试以下代码,若无报错则表示selenium+webdriver的环境搞定了，
-    # browser = webdriver.Chrome()
-    # browser.get('http://www.baidu.com')
-    # time.sleep(5) -5表示等待的秒数
-    # 否则要在指定的网址去下载对应的webdriver，解压后有一个webdriver.exe
-    # 将webdriver.exe拷贝到python3.7和Chrome根目录下（我的是D:\axiaoling\python37和C:\Program Files (x86)\Google\Chrome\Application）
+# 环境设置:
+#     一、使用pip安装selenium==3.11.0版本
+#     二、在python中测试以下代码,若无报错则表示selenium+webdriver的环境搞定了，
+#     browser = webdriver.Chrome()
+#     browser.get('http://www.baidu.com')
+#     time.sleep(5) -5表示等待的秒数
+#     否则要在指定的网址去下载对应的webdriver，解压后有一个webdriver.exe
+#     将webdriver.exe拷贝到python3.7和Chrome根目录下（我的是D:\axiaoling\python37和C:\Program Files (x86)\Google\Chrome\Application）
     # 然后测试上面的代码的代码，没有报错则成功
     #XXXXXXXXXXXXXXXXXXXX不用做这步操作！！！！三、下载PhantomJS，俗称无界面的浏览器XXXXXXXXXXXXXXXXXXXXXX(这个已经弃用了！！！用Chrome()或则和Firefox()代替，而且速度快很多)
     #XXXXXXXXXXXXXXXXXXXX下载地址https://phantomjs.org/download.html 打个叉
@@ -59,12 +59,10 @@ class tencent_cloud:
         
 if __name__ == "__main__":
     url = 'https://cloud.tencent.com/login?s_url=https%3A%2F%2Fconsole.cloud.tencent.com%2Fapi%2Fexplorer%3FProduct%3Dcvm%26Version%3D2017-03-12%26Action%3DAllocateHosts%26SignVersion%3D'
-    # print('输入qq号:')
-    # username=input()
-    # print('输入qq密码')
-    # password=input()
-    username='1580336289'  
-    password='Ab13907416926'
+    print('输入qq号:')
+    username=input()
+    print('输入qq密码')
+    password=input()
     admin = tencent_cloud(url,username,password) 
     admin.crawl()
     
